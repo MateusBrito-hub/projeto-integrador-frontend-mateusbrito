@@ -1,37 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Integrador - Portifolio Pessoal</title>
 </head>
+
 <body>
-    <h1>Projeto Integrador - Portifolio Pessoal</h1>
-    <p>Projeto criado para apresentar minhas habilidades,experiências e projetos desenvolvidos durante a graduação.</p>
+    <header>
+        <h1>Projeto Integrador - Portifolio Pessoal</h1>
+        <p>Projeto criado para apresentar minhas habilidades,experiências e projetos desenvolvidos durante a graduação.
+        </p>
+        <img src="./assets/images/profile-picture.jpg" alt="Imagem de Perfil de Mateus Brito"
+            style="width: 200px; height: 200px; border-radius: 50%;">
+    </header>
 
-    <img src="./assets/images/profile-picture.jpg" alt="Imagem de Perfil de Mateus Brito" style="width: 200px; height: 200px; border-radius: 50%;">
-    <ul>
-        <li><a href="sobre.html" target="_blank" rel="noopener noreferrer">Sobre mim</a></li>
-        <li>Projetos</li>
-        <li>Contato</li>
-    </ul>
+    <main>
 
-    <h2>Projetos</h2>
+        <section>
+            <h2>Área de Interesse:</h2>
 
-    <table>
-        <th>Projeto</th>
-        <th>Descrição</th>
-        <th>Tecnologias</th>
-        <tr>
-            <td>Portifolio</td>
-            <td>Projeto criado para apresentar minhas habilidades,experiências e projetos desenvolvidos durante a graduação.</td>
-            <td>HTML, CSS, JavaScript</td>
-        </tr>
-        <tr>
-            <td>Project-VTX</td>
-            <td>Sistema de gerenciamento para a empresa VTX.</td>
-            <td>TypeScript, Angular</td>
-        </tr>
-    </table>
+            <label for="area">Área de Interesse:</label>
+
+            <select id="area" name="area">
+                <option>Front-end</option>
+                <option>Back-end</option>
+                <option>Mobile</option>
+                <option>Dados</option>
+            </select>
+
+            <ul>
+                <li><a href="sobre.html" target="_blank" rel="noopener noreferrer">Sobre mim</a></li>
+                <li>Projetos</li>
+                <li>Contato</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projetos</h2>
+
+            <table>
+                <th>Projeto</th>
+                <th>Descrição</th>
+                <th>Tecnologias</th>
+                <tr>
+                    <td>Portifolio</td>
+                    <td>Projeto criado para apresentar minhas habilidades,experiências e projetos desenvolvidos durante
+                        a
+                        graduação.</td>
+                    <td>HTML, CSS, JavaScript</td>
+                </tr>
+                <tr>
+                    <td>Project-VTX</td>
+                    <td>Sistema de gerenciamento para a empresa VTX.</td>
+                    <td>TypeScript, Angular</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Formulário de Contato</h2>
+            <p>Forma de contato preferida:</p>
+
+            <input type="radio" id="email-contato" name="contato">
+            <label for="email-contato">E-mail</label>
+
+            <input type="radio" id="telefone-contato" name="contato">
+            <label for="telefone-contato">Telefone</label>
+            <br><br>
+            <form>
+                <fieldset>
+                    <legend>Entre em contato</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}">
+                    <br><br>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="40"></textarea>
+                    <br><br>
+                    <button type="submit">
+                        Enviar
+                    </button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mateus Brito. Todos os direitos reservados.</p>
+    </footer>
 </body>
+
 </html>
